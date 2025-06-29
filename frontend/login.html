@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Feedbacks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="login-container">
+
+    <h1>Login</h1>
+
+    <form id="loginForm">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+      <br>
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" required>
+      <br>
+      <button type="submit">Entrar</button>
+
+    </form>
+<br>
+    <p>Não tem conta? <a href="cadastro.html" class="link">Cadastre-se</a></p>
+<br>
+    <a href="home.html" class="back-home">Voltar ao inicio</a>
+
+  </div>
+
+
+  <script>
+    // Script para lidar com o login
+
+    document.getElementById('loginForm').addEventListener('submit', async function (e) {
+      e.preventDefault();// Previne o envio padrão do formulário
+
+      const email = document.getElementById('email').value;// Obtém o valor do email
+      const senha = document.getElementById('senha').value;// Obtém o valor da senha
+
+      const res = await fetch('http://localhost:3000/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, senha })
+      });// Envia os dados para o servidor
+
+      const data = await res.json();// Converte a resposta em JSON
+
+      if (res.ok) {
+        localStorage.setItem('usuario', data.nome); // Salva o nome
+         localStorage.setItem('email', email);        // Salva o email
+        window.location.href = 'envio_feedbk.html';//  Redireciona para a página de feedback
+      } else {
+        alert(data.error || 'Erro ao fazer login');// Exibe mensagem de erro
+      }
+    });
+  </script>
+
+</body>
+
+</html>

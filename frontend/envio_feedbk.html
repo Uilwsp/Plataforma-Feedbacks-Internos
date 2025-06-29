@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Enviar Feedback</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <script>
+    if (!localStorage.getItem('usuario')) {
+      alert("Você precisa estar logada!");
+      window.location.href = 'login.html';
+    }
+  </script>
+
+
+  <div class="container">
+    <h1>Enviar Feedback</h1>
+
+    <form id="feedbackForm">
+
+      <br>
+      <label for="to">Para (nome do colega):</label>
+      <input type="text" id="to" required>
+      <br>
+      <label for="message">Mensagem:</label>
+      <textarea id="message" rows="8" cols="50"></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <button onclick="logout()">Sair</button>
+    <button onclick="deletarConta()">Excluir conta</button>
+
+    <p><a href="feedbacks.html" class="feedbacks">Ver feedbacks</a></p>
+
+  </div>
+
+  <script>
+    // Verifica se o usuário está logado
+    const usuario = localStorage.getItem('usuario');
+    if (!usuario) {
+      alert("Você precisa estar logada!");
+      window.location.href = 'login.html';
+    }
+
+    document.getElementById('feedbackForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const data = {
+        from: usuario, // nome salvo no login
+        to: document.getElementById('to').value,
+        message: document.getElementById('message').value
+      };
+
+      const res = await fetch('http://localhost:3000/feedbacks', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      if (res.ok) {
+        alert("Feedback enviado com sucesso!");
+        e.target.reset();
+      } else {
+        alert("Erro ao enviar feedback.");
+      }
+    });
+
+    // Função para fazer logout
+    function logout() {
+      localStorage.clear();
+      window.location.href = 'login.html';
+    }
+
+      async function deletarConta() {
+    const confirmacao = confirm('Tem certeza que deseja excluir sua conta?');
+
+    if (!confirmacao) return;
+
+    // Recupera o ID do usuário (aqui vamos simular com localStorage ou você pode melhorar depois)
+    const email = localStorage.getItem('email');
+
+    if (!email) {
+      alert('Usuário não identificado.');
+      return;
+    }
+
+    // Primeiro, buscar o ID no banco (backend precisa buscar pelo email)
+    const resBusca = await fetch(`http://localhost:3000/usuarios/email/${email}`);
+    const dados = await resBusca.json();
+
+    if (!resBusca.ok || !dados.id) {
+      alert('Erro ao localizar usuário.');
+      return;
+    }
+
+    const id = dados.id;
+
+    // Agora faz o DELETE
+    const res = await fetch(`http://localhost:3000/usuarios/${id}`, {
+      method: 'DELETE'
+    });
+
+    if (res.ok) {
+      alert('Conta excluída com sucesso!');
+      localStorage.clear();
+      window.location.href = 'home.html';
+    } else {
+      const erro = await res.json();
+      alert(erro.error || 'Erro ao excluir conta.');
+    }
+  }
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedbacks Recebidos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Feedbacks</h1>
+    <ul id="feedbackList"></ul>
+    <p><a href="envio_feedbk.html"class="feedbacks">Voltar</a></p>
+  </div>
+
+ <script>
+  async function carregarFeedbacks() {
+    const res = await fetch('http://localhost:3000/feedbacks');
+    const feedbacks = await res.json();
+
+    const lista = document.getElementById('feedbackList');
+    lista.innerHTML = '';
+
+    feedbacks.forEach(fb => {
+      const li = document.createElement('li');
+
+      li.innerHTML = `
+        <strong>De:</strong> ${fb.from} <strong>Para:</strong> ${fb.to}<br>
+        <em>${fb.message}</em><br>
+        <button onclick="editarFeedback(${fb.id}, '${fb.from}', '${fb.to}', '${fb.message}')">Editar</button>
+        <button onclick="excluirFeedback(${fb.id})">Excluir</button>
+        <hr>
+      `;
+
+      lista.appendChild(li);
+    });
+  }
+
+  async function excluirFeedback(id) {
+    if (confirm("Tem certeza que deseja excluir este feedback?")) {
+      const res = await fetch(`http://localhost:3000/feedbacks/${id}`, {
+        method: 'DELETE'
+      });
+
+      if (res.ok) {
+        alert("Feedback excluído com sucesso!");
+        carregarFeedbacks();
+      } else {
+        alert("Erro ao excluir.");
+      }
+    }
+  }
+
+  function editarFeedback(id, from, to, message) {
+    const novoFrom = prompt("Editar nome do remetente:", from);
+    const novoTo = prompt("Editar nome do destinatário:", to);
+    const novaMensagem = prompt("Editar mensagem:", message);
+
+    if (novoFrom && novoTo && novaMensagem) {
+      fetch(`http://localhost:3000/feedbacks/${id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          from: novoFrom,
+          to: novoTo,
+          message: novaMensagem
+        })
+      })
+      .then(res => {
+        if (res.ok) {
+          alert("Feedback atualizado com sucesso!");
+          carregarFeedbacks();
+        } else {
+          alert("Erro ao atualizar feedback.");
+        }
+      });
+    }
+  }
+
+  carregarFeedbacks();
+</script>
+
+</body>
+</html>
