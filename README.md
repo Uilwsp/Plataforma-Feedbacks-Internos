@@ -37,3 +37,32 @@ comunicacao-feedback/
 ├── package.json      → Configuração do Node.js
 ├── server.js         → Backend principal
 │ 
+
+## ▶️ Como Executar
+
+1. Clone o repositório:
+
+2. Instale as dependências:
+   
+3. Inicie o servidor:
+
+4. Acesse no navegador:
+
+
+## 📸 Imagens da Interface
+
+> *![image](https://github.com/user-attachments/assets/bacbf634-8860-4ad7-b079-cd261e68c0f3)
+*
+
+## 📘 Licença
+
+Este projeto está sob a licença MIT. Consulte o arquivo `LICENSE` para mais informações.
+
+## ✍️ Autor
+
+- [Seu Nome](https://github.com/seu-usuario)
+
+
+
+
+
