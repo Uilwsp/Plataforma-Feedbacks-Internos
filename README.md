@@ -19,8 +19,7 @@ Esta é uma aplicação web simples e funcional criada para facilitar a comunica
 - **Outras**: JWT para autenticação (básica)
 
 ## 📂 Estrutura de Pastas
-> *(![image](https://github.com/user-attachments/assets/1d810318-09b3-40fd-80e4-8bcb2d2b2fec)
-)*
+> *(![image](https://github.com/user-attachments/assets/1d810318-09b3-40fd-80e4-8bcb2d2b2fec)*
 
 
 ## ▶️ Como Executar
