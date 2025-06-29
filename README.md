@@ -34,7 +34,7 @@ Esta é uma aplicação web simples e funcional criada para facilitar a comunica
 
 ## 📸 Imagens da Interface
 
-> !![Tela inicial](https://github.com/user-attachments/assets/f0253f26-9940-4535-9fe1-51c62ea05956)
+> ![Tela inicial](https://github.com/user-attachments/assets/f0253f26-9940-4535-9fe1-51c62ea05956)
 
 > ![Login](https://github.com/user-attachments/assets/e6f7395f-461d-483e-b064-dbae8ffe4181)
 
