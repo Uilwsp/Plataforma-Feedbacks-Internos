@@ -44,14 +44,13 @@ comunicacao-feedback/
 
 2. Instale as dependências:
    
-3. Inicie o servidor:
+3. Inicie o servidor: node server.js
 
-4. Acesse no navegador:
-
+4. Acesse no navegador: http://localhost:3000
 
 ## 📸 Imagens da Interface
 
-> (https://github.com/user-attachments/assets/bacbf634-8860-4ad7-b079-cd261e68c0f3)
+> *(Insira aqui prints da home, tela de login e envio de feedback)*
 
 ## 📘 Licença
 
@@ -59,7 +58,7 @@ Este projeto está sob a licença MIT. Consulte o arquivo `LICENSE` para mais in
 
 ## ✍️ Autor
 
-- Uiliane Silva (https://github.com/Uilwsp)
+-- [Uiliane Silva](https://github.com/Uilwsp)
 
 
 
