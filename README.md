@@ -24,7 +24,7 @@ Esta é uma aplicação web simples e funcional criada para facilitar a comunica
 
 ## ▶️ Como Executar
 
-1. Clone o repositório:
+1. Clone o repositório
 
 2. Instale as dependências: npm install express cors sqlite3
 
