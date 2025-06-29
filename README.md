@@ -19,38 +19,24 @@ Esta é uma aplicação web simples e funcional criada para facilitar a comunica
 - **Outras**: JWT para autenticação (básica)
 
 ## 📂 Estrutura de Pastas
+> *(![image](https://github.com/user-attachments/assets/1d810318-09b3-40fd-80e4-8bcb2d2b2fec)
+)*
 
-comunicacao-feedback/
-├── frontend/ → Frontend com HTML, CSS e JS
-│      ├── home.html        → tela inicial
-│      ├── login.html       → formulário de login
-│      ├── cadastro.html    → formulário de cadastro
-│      ├── index.html       → Envio de feedback
-│      ├── feedbacks.html   → Lista de feedbacks com editar/excluir
-│      └── style.css        → Estilos da interface
-│
-├── node_modules/→ Dependências
-├── routs/→
-│       ├── feedback.js
-├── db.js             → Conexão e criação do banco SQLite
-├── feedbacks.db      → Arquivo do SQLite (será criado automaticamente)
-├── package.json      → Configuração do Node.js
-├── server.js         → Backend principal
-│ 
 
 ## ▶️ Como Executar
 
 1. Clone o repositório:
 
-2. Instale as dependências:
-   
+2. Instale as dependências: npm install express cors sqlite3
+
 3. Inicie o servidor: node server.js
 
 4. Acesse no navegador: http://localhost:3000
 
 ## 📸 Imagens da Interface
 
-> *(Insira aqui prints da home, tela de login e envio de feedback)*
+> *(![image](https://github.com/user-attachments/assets/e5d1ac84-ccc3-4f4b-907e-ebd18fa24122)
+)*
 
 ## 📘 Licença
 
