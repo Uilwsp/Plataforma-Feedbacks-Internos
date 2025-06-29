@@ -51,8 +51,7 @@ comunicacao-feedback/
 
 ## 📸 Imagens da Interface
 
-> *![image](https://github.com/user-attachments/assets/bacbf634-8860-4ad7-b079-cd261e68c0f3)
-*
+> (https://github.com/user-attachments/assets/bacbf634-8860-4ad7-b079-cd261e68c0f3)
 
 ## 📘 Licença
 
@@ -60,7 +59,7 @@ Este projeto está sob a licença MIT. Consulte o arquivo `LICENSE` para mais in
 
 ## ✍️ Autor
 
-- [Seu Nome](https://github.com/seu-usuario)
+- Uiliane Silva (https://github.com/Uilwsp)
 
 
 
