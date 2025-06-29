@@ -34,11 +34,16 @@ Esta é uma aplicação web simples e funcional criada para facilitar a comunica
 
 ## 📸 Imagens da Interface
 
-> *(![image](https://github.com/user-attachments/assets/e5d1ac84-ccc3-4f4b-907e-ebd18fa24122)*
-> ![image](https://github.com/user-attachments/assets/bc9d913c-21a3-441e-b43e-2fb1fa3596e3)
-> ![image](https://github.com/user-attachments/assets/4009a3c3-56f0-4cbc-bbe6-cbb9de13f4f4)
->![image](https://github.com/user-attachments/assets/666a00bf-230d-4fe1-b285-d99919e4ddfd)
->![image](https://github.com/user-attachments/assets/27b67638-5f51-4912-823c-4b0bf4a2867a)
+> !![Tela inicial](https://github.com/user-attachments/assets/f0253f26-9940-4535-9fe1-51c62ea05956)
+
+> ![Login](https://github.com/user-attachments/assets/e6f7395f-461d-483e-b064-dbae8ffe4181)
+
+> ![Cadastro](https://github.com/user-attachments/assets/f973cbc7-7b1b-421c-8eda-5c92023f49f5)
+
+> ![Envio de feedbacks](https://github.com/user-attachments/assets/1bcde9db-d114-4267-8b76-8674bf5e50f2)
+
+> ![Feedbacks](https://github.com/user-attachments/assets/9eab9e1f-3091-4016-8a4c-e7f0b70d4943)
+
 
 >
 
