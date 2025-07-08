@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname, 'frontend')));// Configura o Express
 
 // Rota principal que abre a tela home.html
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'frontend/home.html'));// Envia o arquivo home.html quando a rota raiz é acessada
+  res.sendFile(path.join(__dirname, 'frontend/index.html'));// Envia o arquivo home.html quando a rota raiz é acessada
 });
 
 // -------------------- ROTAS DE FEEDBACK --------------------
