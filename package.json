@@ -16,5 +16,14 @@
     "jsonwebtoken": "^9.0.2",
     "sqlite3": "^5.1.7"
   },
-  "description": ""
+  "description": "Esta é uma aplicação web simples e funcional criada para facilitar a comunicação interna por meio de feedbacks. Usuários podem se cadastrar, fazer login e trocar mensagens de reconhecimento, sugestões ou melhorias com colegas de equipe. O sistema garante autenticação, controle de acesso e histórico de mensagens, sendo ideal para equipes pequenas, grupos escolares ou qualquer ambiente que valorize a colaboração.",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Uilwsp/Plataforma-Feedbacks-Internos.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Uilwsp/Plataforma-Feedbacks-Internos/issues"
+  },
+  "homepage": "https://github.com/Uilwsp/Plataforma-Feedbacks-Internos#readme"
 }
